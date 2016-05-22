@@ -1,5 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<con:soapui-project id="9ddd2250-ee12-42c3-abd0-8a4a03566f38" activeEnvironment="Default" name="CountryDetails3" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="ca5d2a80-a7ee-440a-bd18-7813438c1e2d" wsaVersion="NONE" name="countrySoap" type="wsdl" bindingName="{http://www.webserviceX.NET}countrySoap" soapVersion="1_1" anonymous="optional" definition="http://www.webservicex.net/country.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.webservicex.net/country.asmx?WSDL"><con:part><con:url>http://www.webservicex.net/country.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.webserviceX.NET" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webserviceX.NET" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+<con:soapui-project id="9ddd2250-ee12-42c3-abd0-8a4a03566f38" activeEnvironment="Default" name="CountryDetails3" resourceRoot="" soapui-version="5.2.1" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="TestSuite" value="&lt;all>"/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="TestRunner Path" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="Save Project" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Export JUnit Results" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="TestCase" value="&lt;all>"/>
+  <con:entry key="Print Report" value="false"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="Endpoint" value=""/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="ca5d2a80-a7ee-440a-bd18-7813438c1e2d" wsaVersion="NONE" name="countrySoap" type="wsdl" bindingName="{http://www.webserviceX.NET}countrySoap" soapVersion="1_1" anonymous="optional" definition="http://www.webservicex.net/country.asmx?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://www.webservicex.net/country.asmx?WSDL"><con:part><con:url>http://www.webservicex.net/country.asmx?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://www.webserviceX.NET" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://www.webserviceX.NET" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://www.webserviceX.NET">
       <s:element name="GetCountryByCountryCode">
@@ -929,7 +960,11 @@ matches(//ns1:GetCountriesResponse[1]/ns1:GetCountriesResult[1]/text(),'Albania'
          <web:CountryCode>${Properties#countrycode}</web:CountryCode>
       </web:GetCountryByCountryCode>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="cd38f0f0-bf2a-4e43-9f18-246bee2812c5"><con:configuration/></con:assertion><con:assertion type="Valid HTTP Status Codes" id="fca087b2-a9fc-4905-bdce-8425956e282e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ab2e63e0-bca8-4fab-857a-a4502f999341" name="Contains"><con:configuration><token>Sweden</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="3fb4b982-55a8-4c8c-8139-99d8411fcdf9" name="Not Contains"><con:configuration><token>Norway</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetCurrencyByCountry" id="983edf8d-d2c7-4ab5-b763-85d633c89576"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>countrySoap</con:interface><con:operation>GetCurrencyByCountry</con:operation><con:request name="GetCurrencyByCountry" id="20abc844-3fb0-4734-b0a2-e1d521104d9b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/country.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="cd38f0f0-bf2a-4e43-9f18-246bee2812c5"><con:configuration/></con:assertion><con:assertion type="Valid HTTP Status Codes" id="fca087b2-a9fc-4905-bdce-8425956e282e" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="ab2e63e0-bca8-4fab-857a-a4502f999341" name="Contains"><con:configuration><token>Sweden</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="3fb4b982-55a8-4c8c-8139-99d8411fcdf9" name="Not Contains"><con:configuration><token>Norway</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="properties" name="Properties" id="d82ceed3-5e19-4b3e-8bb5-97a4a78c21d5"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>countrycode</con:name><con:value>SE</con:value></con:property></con:properties></con:config></con:testStep><con:testStep type="groovy" name="Global_Country" id="4cc83a5f-825b-4345-84c7-92b454caad60"><con:settings/><con:config><script>import groovy.xml.*
+
+def countryname = "Sweden"
+log.info(countryname)
+com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("countryname",countryname)</script></con:config></con:testStep><con:testStep type="request" name="GetCurrencyByCountry" id="983edf8d-d2c7-4ab5-b763-85d633c89576"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>countrySoap</con:interface><con:operation>GetCurrencyByCountry</con:operation><con:request name="GetCurrencyByCountry" id="20abc844-3fb0-4734-b0a2-e1d521104d9b"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/country.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
    <soapenv:Header/>
    <soapenv:Body>
       <web:GetCurrencyByCountry>
@@ -937,15 +972,7 @@ matches(//ns1:GetCountriesResponse[1]/ns1:GetCountriesResult[1]/text(),'Albania'
          <web:CountryName>${countryname}</web:CountryName>
       </web:GetCurrencyByCountry>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="08e914a5-8407-4c5e-964b-2f6f6da68240"><con:configuration/></con:assertion><con:assertion type="Valid HTTP Status Codes" id="33060617-e544-4269-8fe1-c46e01467931" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="266016a3-d5e7-4285-86c2-eb1e069d8be6" name="Not Contains"><con:configuration><token>NOK</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="request" name="GetGMTbyCountry" id="5aff52e6-0791-46fc-9084-51eb367f1679"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>countrySoap</con:interface><con:operation>GetGMTbyCountry</con:operation><con:request name="GetGMTbyCountry" id="a098be05-9302-401d-94ef-95d5c859fa26"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/country.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
-   <soapenv:Header/>
-   <soapenv:Body>
-      <web:GetGMTbyCountry>
-         <!--Optional:-->
-         <web:CountryName>${countryNameFetched}</web:CountryName>
-      </web:GetGMTbyCountry>
-   </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="a769a0d8-1c3c-44f4-880b-70c31d0ea724"><con:configuration/></con:assertion><con:assertion type="Valid HTTP Status Codes" id="27578e16-744b-4c99-8394-07b4bc6cb709" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="2f8dd918-ad11-4c47-a981-7d35fa610e74" name="Contains"><con:configuration><token>+1</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="0ff13b95-d5cd-4876-aa31-1095d9d30354" name="Not Contains"><con:configuration><token>+2</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="FetchResponse_CountryName" id="38d647be-2f5b-4076-815b-3bfa5f362daa"><con:settings/><con:config><script>import groovy.xml.*
+</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="08e914a5-8407-4c5e-964b-2f6f6da68240"><con:configuration/></con:assertion><con:assertion type="Valid HTTP Status Codes" id="33060617-e544-4269-8fe1-c46e01467931" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="266016a3-d5e7-4285-86c2-eb1e069d8be6" name="Not Contains"><con:configuration><token>NOK</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:testStep type="groovy" name="FetchResponse_CountryName" id="38d647be-2f5b-4076-815b-3bfa5f362daa"><con:settings/><con:config><script>import groovy.xml.*
 import groovy.util.XmlParser
 import groovy.util.XmlSlurper
 
@@ -955,8 +982,12 @@ def response = new XmlSlurper().parseText(responseContent).Body.GetCurrencyByCou
 def countryName = new XmlSlurper().parseText(response).Table.Name[0]
 log.info(countryName)
 com.eviware.soapui.SoapUI.globalProperties.setPropertyValue( "countryNameFetched", countryName.toString())
-</script></con:config></con:testStep><con:testStep type="groovy" name="Global_Country" id="4cc83a5f-825b-4345-84c7-92b454caad60"><con:settings/><con:config><script>import groovy.xml.*
-
-def countryname = "Sweden"
-log.info(countryname)
-com.eviware.soapui.SoapUI.globalProperties.setPropertyValue("countryname",countryname)</script></con:config></con:testStep><con:testStep type="properties" name="Properties" id="d82ceed3-5e19-4b3e-8bb5-97a4a78c21d5"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties><con:property><con:name>countrycode</con:name><con:value>SE</con:value></con:property></con:properties></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
+</script></con:config></con:testStep><con:testStep type="request" name="GetGMTbyCountry" id="5aff52e6-0791-46fc-9084-51eb367f1679"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>countrySoap</con:interface><con:operation>GetGMTbyCountry</con:operation><con:request name="GetGMTbyCountry" id="a098be05-9302-401d-94ef-95d5c859fa26"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://www.webservicex.net/country.asmx</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://www.webserviceX.NET">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:GetGMTbyCountry>
+         <!--Optional:-->
+         <web:CountryName>${countryNameFetched}</web:CountryName>
+      </web:GetGMTbyCountry>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Schema Compliance" id="a769a0d8-1c3c-44f4-880b-70c31d0ea724"><con:configuration/></con:assertion><con:assertion type="Valid HTTP Status Codes" id="27578e16-744b-4c99-8394-07b4bc6cb709" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Simple Contains" id="2f8dd918-ad11-4c47-a981-7d35fa610e74" name="Contains"><con:configuration><token>+1</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:assertion type="Simple NotContains" id="0ff13b95-d5cd-4876-aa31-1095d9d30354" name="Not Contains"><con:configuration><token>+2</token><ignoreCase>true</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
